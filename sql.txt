@@ -1,0 +1,2 @@
+INSERT INTO userdetails(name,password)
+VALUES ($_POST["username"], $_POST["password"]);

@@ -5,6 +5,7 @@
 <?php
 
 $name=$_POST["name"];
+$password=($_POST["pass"]);
 echo "hello , ".$name;
 echo "<br/>";
 echo " Today's date is : <br/>";
@@ -26,8 +27,7 @@ $dbhost = 'localhost:3036';
       die('Could not connect: ' . mysql_error());
    }
    echo 'Connected successfully';
-    $sql =
-     $retvalue=mysql_query("SELECT * FROM userdetails WHERE name='" . $_POST["name"] . "'");
+     $retvalue=mysql_query("SELECT * FROM userdetails WHERE username='" . $_POST["name"] . "' and password='".$_POST["pass"]."'");
      $numrows=mysql_num_rows($retvalue);
       if($numrows==0)
    {
